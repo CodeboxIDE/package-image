@@ -1,0 +1,12 @@
+{
+    "name": "image",
+    "version": "0.0.0",
+    "description": "Impage previewer",
+    "browser": "./src/index.js",
+    "engines": {
+        "codebox": ">=1.0.0"
+    },
+    "packageDependencies": {
+        "tabs": "CodeboxIDE/package-tabs"
+    }
+}
