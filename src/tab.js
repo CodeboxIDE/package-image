@@ -47,14 +47,8 @@ var Tab = codebox.tabs.Panel.extend({
 
     // Update image
     onFileChange: function() {
-        var that = this;
-
-        this.model.read({ base64: true })
-        .then(function(content) {
-            that.$img.attr("src", "data:"+that.model.get("mime")+";base64,"+content);
-            that.onResetZoom();
-        })
-        .fail(dialogs.error);
+        this.$img.attr("src", this.model.accessUrl());
+        this.onResetZoom();
     },
 
     // Initialize zoom
